@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlust</title>
+</head> -->
+<body>
+    <!-- ye jo form he ye almost identical hone vala he new form ke sath -->
+
+    <% layout("/layouts/boilerplate") %> <!--ejs-mate-->
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+    
+        
+    
+        <h1>Edit Your listing!</h1>
+    
+        <form method="post" action="/listings/<%= listing._id%>?_method=PUT" novalidate class="needs-validation"> <!--method override la npm i method-override karun install karu nantar query string ?_method=PUT request janar pahile app.js madhe require and app.use kara te kele ahe & post request to conver put request honar -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required>
+            <div class="valid-feedback">title looks good!</div>
+            </div>
+    
+         
+    
+            <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+            <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea> <!--text area ghetle karan te long description yenar mhanun and tet area madhe type="text" nahipan lihile tari chalel--> 
+            <div class="invalid-feedback">please enter a short description</div>    
+          </div>
+    
+    
+            <div class="mb-3 " >
+            <label for="image" class="form-label">Image-Link</label>
+            <input name="listing[image][url]" value="<%= listing.image.url %>" type="text" class="form-control" required>
+            <div class="invalid-feedback">please enter a valid link for image</div>
+            </div>
+          
+            <div class="row">
+            <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required>
+            <div class="invalid-feedback">price should be valid</div>   
+         </div>
+    
+          
+    
+            <div class="mb-3 col-md-8">
+            <label for="Country" class="form-label">Country</label>
+            <input name="listing[country]" value="<%= listing.country %>" type="text" required>
+            <div class="invalid-feedback">country name should be valid</div>
+            </div>
+            </div>
+            
+    
+            <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" value="<%= listing.location %>" type="text" required> <!--object chi key banavat ahe as listing[location] as key value pair bannar-->
+            <div class="invalid-feedback">location should be valid</div>
+            </div>
+          
+            <button class="btn brn-dark edit-btn mt-3">Edit</button>
+        </form>
+    </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+<!-- </html> -->

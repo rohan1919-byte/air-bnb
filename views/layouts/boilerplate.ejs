@@ -1,0 +1,39 @@
+<!-- boiler plate means sample code jo har jagah exist karta he.  aisa code jo pehle se likha hota he ham use boilerplae kehte he -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wonderlust</title>
+    <link rel="stylesheet" href="/css/style.css"> <!--css folder madhe style.css ahe tyala noilerplate.ejs tun link kele tar sarve file madhe ejs-mate chya help tun sarve style vagere apply hotil-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><!--bootstrapt link la copy karun paste keli bootstrap la include kelyavar te bootstrap custom fonts gheun yete sobat aapan localhost la call karun ghu shakta -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--font awesome chya icon apply sathi font awesome cdn link paste keli -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- yachat sarve change kele ki sarve yachat te style vagere etc apply honar -->
+    <!-- <h1>WonderLust</h1> -->
+
+       <%- include ("../includes/navbar.ejs") %> <!--navbar.ejs la include kele -->
+
+    <div class="container">
+        <%- body %>
+    </div>
+
+
+        <%- include("../includes/footer.ejs") %> <!--footer.ejs file la inclue kele just script tag chya varti-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--ha script link  bootstap website varun copy kela ahe-->
+        
+        <script src="/js/script.js"></script><!--bootstapt che form madhe validation madhe js cha code copy karun to code public folder madhe script.js madhe paste kel and to form apply honyasathi noilerplate madhe link karu tya js file la-->
+   
+</body>
+</html>
+
+<!-- boilerplate me chote chote hisse header footer navabar te sarve moduler format madhe lihinyasathi moduler means har file me code ka chota chota hissa hota he ye right way understanding ke liye    -->
+<!-- aapn header footer navabar sathi new file banau karan kahi change karayche asel header footer navbar sathi tar direct tya file la kholu navbar vager chi  -->
+<!-- navbar sathi new file banavli includes folder madhe navbar.ejs file banavli  -->

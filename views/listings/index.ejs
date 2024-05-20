@@ -1,0 +1,37 @@
+<% layout("/layouts/boilerplate") %> <!--boilerplate.ejs madhe boilerplate che template banavle te as use karu shakta he ejs-mate package ne hot ahe -->
+
+<body>
+    <h1>all listings</h1>
+
+    <!-- <form method="get" action="/listings/new">
+        <button>create new listing</button>
+    </form> new route var request janar -->
+
+    
+
+
+
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1"> <!--row-cols-lg-3 mhanje 1 row ke andar columns madhe large screen size var tyat 3 card minimum yek line var disnar and dusre je ahe te jevha apn inspect karun screnn small samll karat janar ts md medium sm small var result disnar  -->
+       
+      <% for(let listing of allListings) {%>
+       <a href="/listings/<%=listing._id%>" class="listing-link">
+
+  <div class="card col" >
+      <img src="<%= listing.image.url%> " class="card-img-top" alt="listing_image" style="height:20rem;"> <!--listing.image means database madhun image yenar-->
+      
+      <div class="card-img-overlay"></div>
+      <div class="card-body">
+        <p class="card-text">
+         <b> <%= listing.title%> </b> <br/>
+         &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+       </p>
+      </div>
+    </div> <!--bootstrap image card varun code copy kela-->
+    <%}%>
+  </div>
+
+
+
+     
+</body>
